@@ -1,0 +1,42 @@
+# Online Python compiler (interp# Define the Player class
+class Player:
+    def __init__(self, name, x=0, y=0):
+        self.name = name        # Name of the player
+        self.x = x              # Player's x-coordinate (horizontal position)
+        self.y = y              # Player's y-coordinate (vertical position)
+
+    # Method to move the player up
+    def move_up(self):
+        self.y += 1
+        print(f"{self.name} moved up to ({self.x}, {self.y})")
+
+    # Method to move the player down
+    def move_down(self):
+        self.y -= 1
+        print(f"{self.name} moved down to ({self.x}, {self.y})")
+
+    # Method to move the player left
+    def move_left(self):
+        self.x -= 1
+        print(f"{self.name} moved left to ({self.x}, {self.y})")
+
+    # Method to move the player right
+    def move_right(self):
+        self.x += 1
+        print(f"{self.name} moved right to ({self.x}, {self.y})")
+
+    # Method to display player's current position
+    def get_position(self):
+        return f"{self.name}'s current position: ({self.x}, {self.y})"
+
+# Create an instance of the Player class
+player = Player("Hero")
+
+# Example game loop where the player can move
+player.move_up()    # Move up
+player.move_right() # Move right
+player.move_down()  # Move down
+player.move_left()  # Move left
+
+# Display the final position
+print(player.get_position())
